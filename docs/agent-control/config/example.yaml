@@ -1,0 +1,23 @@
+environment: development
+
+database:
+  url: postgresql://postgres:postgres@localhost:5432/agent_control
+
+api:
+  host: 0.0.0.0
+  port: 8080
+
+governance:
+  default_token_budget: 30000
+  default_max_tool_calls: 30
+  default_max_parallelism: 4
+
+memory:
+  default_max_items: 10
+
+runtime:
+  provider: agno
+
+multica:
+  base_url: ""
+  webhook_secret: ""
