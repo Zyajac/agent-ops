@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentMemory",
+  "type": "object",
+  "required": ["memory_id", "type", "content", "created_at"],
+  "properties": {
+    "memory_id": {"type": "string"},
+    "type": {"enum": ["working", "episodic", "semantic", "procedural"]},
+    "namespace": {"type": "object"},
+    "scope": {"type": "string"},
+    "content": {},
+    "source": {"type": "object"},
+    "importance": {"type": ["number", "null"]},
+    "confidence": {"type": ["number", "null"]},
+    "validity": {"type": "object"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": ["string", "null"], "format": "date-time"}
+  },
+  "additionalProperties": false
+}
