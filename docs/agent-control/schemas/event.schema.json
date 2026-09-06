@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentEvent",
+  "type": "object",
+  "required": ["event_version", "event_id", "event_type", "occurred_at", "task"],
+  "properties": {
+    "event_version": {"type": "string"},
+    "event_id": {"type": "string"},
+    "event_type": {"type": "string"},
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "source": {"type": "object"},
+    "task": {"type": "object"},
+    "run_id": {"type": ["string", "null"]},
+    "correlation_id": {"type": ["string", "null"]},
+    "causation_id": {"type": ["string", "null"]},
+    "idempotency_key": {"type": ["string", "null"]},
+    "payload": {"type": "object"},
+    "routing": {"type": "object"}
+  },
+  "additionalProperties": false
+}
